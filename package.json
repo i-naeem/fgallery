@@ -1,6 +1,8 @@
 {
   "name": "fgallery",
   "version": "0.1.0",
+  "description": "A simple photo gallery built with react, chakra-ui and firebase.",
+  "author": "Mohammad Naeem",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.1.2",
