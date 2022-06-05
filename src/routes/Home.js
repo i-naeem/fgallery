@@ -16,6 +16,7 @@ const Home = props => {
               marginBottom="5"
               fontSize="6xl"
               lineHeight="1"
+              as="div"
             >
               <Text>The home for your</Text>
               <Text>memories</Text>
