@@ -7,7 +7,6 @@ const GotoButton = props => {
       as={Link}
       w="180px"
       to="/login"
-      bgColor="#1A73E8"
       colorScheme="blue"
       borderRadius="base"
     >
