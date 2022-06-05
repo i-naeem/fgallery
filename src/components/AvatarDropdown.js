@@ -1,7 +1,6 @@
-import { Avatar, IconButton, useTheme } from '@chakra-ui/react';
+import { Avatar, IconButton } from '@chakra-ui/react';
 
 const AvatarDropdown = props => {
-  const theme = useTheme();
   return (
     <IconButton
       icon={
