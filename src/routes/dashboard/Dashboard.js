@@ -1,5 +1,6 @@
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
 import { Box, Heading, HStack, Container } from '@chakra-ui/react';
+import Searchbar from '../../components/Searchbar';
 import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = props => {
@@ -12,7 +13,10 @@ const Dashboard = props => {
           </Link>
 
           <Container maxWidth="90vw">
-            <ColorModeSwitcher />
+            <HStack justify="space-between">
+              <Searchbar maxWidth="800px" />
+              <ColorModeSwitcher />
+            </HStack>
           </Container>
         </HStack>
       </Box>
