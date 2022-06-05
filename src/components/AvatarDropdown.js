@@ -1,19 +1,33 @@
-import { Avatar, IconButton } from '@chakra-ui/react';
+import {
+  Menu,
+  Avatar,
+  MenuList,
+  MenuItem,
+  IconButton,
+  MenuButton,
+} from '@chakra-ui/react';
 
 const AvatarDropdown = props => {
   return (
-    <IconButton
-      icon={
-        <Avatar
-          role="button"
-          name="Dan Abrahmov"
-          src="https://bit.ly/dan-abramov"
+    <Menu>
+      <MenuButton>
+        <IconButton
+          as="span"
+          icon={
+            <Avatar
+              name="Avatar Name"
+              src="https://bit.ly/dan-abramov"
+              size="sm"
+            />
+          }
           size="sm"
+          isRound
         />
-      }
-      size="sm"
-      isRound
-    />
+      </MenuButton>
+      <MenuList>
+        <MenuItem>TODO</MenuItem>
+      </MenuList>
+    </Menu>
   );
 };
 
