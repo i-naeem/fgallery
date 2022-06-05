@@ -10,6 +10,7 @@ import {
   VStack,
   Button,
   MenuDivider,
+  Center,
 } from '@chakra-ui/react';
 
 const AvatarDropdown = props => {
@@ -29,7 +30,7 @@ const AvatarDropdown = props => {
           isRound
         />
       </MenuButton>
-      <MenuList minWidth="300px">
+      <MenuList minWidth="350px" as="div">
         <Box p="5">
           <VStack>
             <Avatar
@@ -44,6 +45,12 @@ const AvatarDropdown = props => {
             </Text>
           </VStack>
         </Box>
+        <MenuDivider />
+        <Center py="3">
+          <Button minW="70%" variant="outline">
+            Sign out
+          </Button>
+        </Center>
       </MenuList>
     </Menu>
   );
