@@ -1,10 +1,24 @@
-import { Box, Text } from '@chakra-ui/react';
+import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
+import { Box, Heading, HStack, Container } from '@chakra-ui/react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = props => {
   return (
     <Box>
+      <Box as="header" height="75px" boxShadow="base">
+        <HStack p="2" justify="space-between" align="center" height="100%">
+          <Link to="/">
+            <Heading>Google</Heading>
+          </Link>
+
+          <Container maxWidth="90vw">
+            <ColorModeSwitcher />
+          </Container>
+        </HStack>
+      </Box>
+
       <Box height="calc(90vh - 75px)">
-        <Text>Hello World</Text>
+        <Outlet />
       </Box>
     </Box>
   );

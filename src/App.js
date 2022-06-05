@@ -12,7 +12,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/app" element={<Dashboard />} />
+          <Route path="/app" element={<Dashboard />}>
+            <Route index element={<h1>Home</h1>} />
+          </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
