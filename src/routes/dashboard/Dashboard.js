@@ -10,6 +10,7 @@ import {
 import Searchbar from '../../components/Searchbar';
 import { Link, Outlet } from 'react-router-dom';
 import { SettingsIcon, UploadIcon } from '../../assets/icons';
+import AvatarDropdown from '../../components/AvatarDropdown';
 
 const Dashboard = props => {
   return (
@@ -39,6 +40,8 @@ const Dashboard = props => {
                   variant="ghost"
                   icon={<SettingsIcon />}
                 />
+
+                <AvatarDropdown />
                 <ColorModeSwitcher />
               </HStack>
             </HStack>
