@@ -7,9 +7,21 @@ import {
   FormLabel,
   FormControl,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import Header from '../components/Header/Header';
 
 const Login = props => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onEmailChange = event => setEmail(event.target.value);
+  const onPasswordChange = event => setPassword(event.target.value);
+
+  const onLogin = event => {
+    event.preventDefault();
+
+    alert(`Email: ${email} and Password: ${password}`);
+  };
   return (
     <Box>
       <Header />
@@ -20,11 +32,12 @@ const Login = props => {
             px={5}
             py={20}
             as="form"
-            maxW="600px"
-            flexGrow="1"
             shadow="md"
+            flexGrow="1"
+            maxW="600px"
             borderRadius="md"
             borderWidth="1px"
+            onSubmit={onLogin}
           >
             <Text
               fontWeight="bold"
@@ -38,12 +51,24 @@ const Login = props => {
 
             <FormControl mb="5">
               <FormLabel htmlFor="email">Email address</FormLabel>
-              <Input id="email" type="email" placeholder="example@gmail.com" />
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={onEmailChange}
+                placeholder="example@gmail.com"
+              />
             </FormControl>
 
             <FormControl mb="5">
               <FormLabel htmlFor="password">Password</FormLabel>
-              <Input id="password" type="password" placeholder="Password" />
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                placeholder="Password"
+                onChange={onPasswordChange}
+              />
             </FormControl>
 
             <Button type="submit" size="lg" width="100%" colorScheme="blue">
