@@ -1,8 +1,15 @@
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
-import { Box, Heading, HStack, Container, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  HStack,
+  Container,
+  Button,
+  IconButton,
+} from '@chakra-ui/react';
 import Searchbar from '../../components/Searchbar';
 import { Link, Outlet } from 'react-router-dom';
-import { UploadIcon } from '../../assets/icons';
+import { SettingsIcon, UploadIcon } from '../../assets/icons';
 
 const Dashboard = props => {
   return (
@@ -25,6 +32,13 @@ const Dashboard = props => {
                 >
                   Upload
                 </Button>
+
+                <IconButton
+                  aria-label="Settings"
+                  color="gray.500"
+                  variant="ghost"
+                  icon={<SettingsIcon />}
+                />
                 <ColorModeSwitcher />
               </HStack>
             </HStack>
