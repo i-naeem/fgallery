@@ -1,35 +1,11 @@
-import {
-  Box,
-  Text,
-  HStack,
-  Button,
-  Center,
-  VStack,
-  Heading,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
-
-const GotoButton = props => {
-  return (
-    <Button w="180px" bgColor="#1A73E8" colorScheme="blue" borderRadius="base">
-      Go to FGallery
-    </Button>
-  );
-};
+import { Box, Text, Center, VStack } from '@chakra-ui/react';
+import GotoButton from '../components/GotoButton';
+import Header from '../components/Header/Header';
 
 const Home = props => {
   return (
     <Box>
-      <Box as="header" height="75px" boxShadow="base">
-        <HStack p="2" justify="space-between" align="center" height="100%">
-          <Heading>Google</Heading>
-
-          <HStack>
-            <GotoButton />
-            <ColorModeSwitcher />
-          </HStack>
-        </HStack>
-      </Box>
+      <Header />
 
       <Box height="calc(90vh - 75px)">
         <Center height="100%">
