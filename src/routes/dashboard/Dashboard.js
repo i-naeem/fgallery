@@ -1,7 +1,8 @@
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
-import { Box, Heading, HStack, Container } from '@chakra-ui/react';
+import { Box, Heading, HStack, Container, Button } from '@chakra-ui/react';
 import Searchbar from '../../components/Searchbar';
 import { Link, Outlet } from 'react-router-dom';
+import { UploadIcon } from '../../assets/icons';
 
 const Dashboard = props => {
   return (
@@ -15,7 +16,17 @@ const Dashboard = props => {
           <Container maxWidth="90vw">
             <HStack justify="space-between">
               <Searchbar maxWidth="800px" />
-              <ColorModeSwitcher />
+
+              <HStack>
+                <Button
+                  leftIcon={<UploadIcon />}
+                  variant="ghost"
+                  color="gray.500"
+                >
+                  Upload
+                </Button>
+                <ColorModeSwitcher />
+              </HStack>
             </HStack>
           </Container>
         </HStack>
