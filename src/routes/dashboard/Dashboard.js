@@ -38,6 +38,7 @@ const Dashboard = props => {
                   aria-label="Settings"
                   color="gray.500"
                   variant="ghost"
+                  isRound
                   icon={<SettingsIcon />}
                 />
 

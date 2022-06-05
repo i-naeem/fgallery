@@ -1,8 +1,21 @@
-import { Icon, IconButton } from '@chakra-ui/react';
-import { FaPersonBooth } from 'react-icons/fa';
+import { Avatar, IconButton, useTheme } from '@chakra-ui/react';
 
 const AvatarDropdown = props => {
-  return <IconButton icon={<Icon as={FaPersonBooth} />} />;
+  const theme = useTheme();
+  return (
+    <IconButton
+      icon={
+        <Avatar
+          role="button"
+          name="Dan Abrahmov"
+          src="https://bit.ly/dan-abramov"
+          size="sm"
+        />
+      }
+      size="sm"
+      isRound
+    />
+  );
 };
 
 export default AvatarDropdown;
