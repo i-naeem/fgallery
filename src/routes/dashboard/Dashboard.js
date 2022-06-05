@@ -42,8 +42,8 @@ const Dashboard = props => {
                   icon={<SettingsIcon />}
                 />
 
-                <AvatarDropdown />
                 <ColorModeSwitcher />
+                <AvatarDropdown />
               </HStack>
             </HStack>
           </Container>
