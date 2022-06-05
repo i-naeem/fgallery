@@ -1,16 +1,15 @@
 import {
-  Menu,
-  Avatar,
-  MenuList,
-  MenuItem,
-  IconButton,
-  MenuButton,
   Box,
+  Menu,
   Text,
+  Avatar,
   VStack,
   Button,
-  MenuDivider,
   Center,
+  MenuList,
+  IconButton,
+  MenuButton,
+  MenuDivider,
 } from '@chakra-ui/react';
 
 const AvatarDropdown = props => {
