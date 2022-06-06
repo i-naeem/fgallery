@@ -1,4 +1,4 @@
-import { Text, HStack } from '@chakra-ui/react';
+import { Text, HStack, Button } from '@chakra-ui/react';
 import { useLocation } from 'react-router-dom';
 
 const SidebarItem = ({ icon, label, to }) => {
@@ -6,23 +6,25 @@ const SidebarItem = ({ icon, label, to }) => {
   const isActive = to === location.pathname;
 
   return (
-    <Text
+    <Button
       p="2"
+      width="100%"
+      color="black"
       role="button"
       fontSize="xl"
+      variant="ghost"
+      colorScheme="blue"
+      isActive={isActive}
       borderRadius="base"
       borderEndRadius="3xl"
-      _hover={{ bgColor: 'gray.100' }}
-      _active={{ bgColor: 'blue.100' }}
-      sx={{ bgColor: isActive ? 'blue.100' : '' }}
     >
-      <HStack px="4">
+      <HStack flexGrow="1" px="4">
         {icon}
-        <Text fontSize="md" fontWeight="medium" px="4">
+        <Text fontSize="md" fontWeight="medium" px="3">
           {label}
         </Text>
       </HStack>
-    </Text>
+    </Button>
   );
 };
 
