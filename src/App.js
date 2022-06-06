@@ -4,6 +4,7 @@ import Dashboard from './routes/dashboard/Dashboard';
 import Login from './routes/Login';
 import Home from './routes/Home';
 import React from 'react';
+import Photos from './routes/dashboard/Photos';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           <Route path="/app" element={<Dashboard />}>
-            <Route index element={<h1>Home</h1>} />
+            <Route index element={<Photos />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />

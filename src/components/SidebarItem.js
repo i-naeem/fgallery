@@ -8,7 +8,7 @@ const SidebarItem = ({ icon, label, to }) => {
   return (
     <Button
       p="2"
-      width="100%"
+      width="220px"
       color="black"
       role="button"
       fontSize="xl"

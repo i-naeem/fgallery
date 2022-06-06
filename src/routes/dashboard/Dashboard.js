@@ -13,7 +13,6 @@ import { ImageIcon, SettingsIcon, UploadIcon } from '../../assets/icons';
 import AvatarDropdown from '../../components/AvatarDropdown';
 import SidebarItem from '../../components/SidebarItem';
 
-const DRAWER_WIDTH = '230px';
 const Dashboard = props => {
   return (
     <Box>
@@ -53,8 +52,8 @@ const Dashboard = props => {
       </Box>
 
       <Box height="calc(90vh - 75px)">
-        <HStack>
-          <Box width={DRAWER_WIDTH} py="3">
+        <HStack alignItems="flex-start">
+          <Box py="3">
             <SidebarItem icon={<ImageIcon />} label="Photos" to="/app" />
           </Box>
           <Box>
