@@ -6,13 +6,16 @@ import {
   Container,
   Button,
   IconButton,
+  VStack,
+  Text,
 } from '@chakra-ui/react';
 import Searchbar from '../../components/Searchbar';
 import { Link, Outlet } from 'react-router-dom';
-import { SettingsIcon, UploadIcon } from '../../assets/icons';
+import { ImageIcon, SettingsIcon, UploadIcon } from '../../assets/icons';
 import AvatarDropdown from '../../components/AvatarDropdown';
+import SidebarItem from '../../components/SidebarItem';
 
-const DRAWER_WIDTH = '250px';
+const DRAWER_WIDTH = '230px';
 const Dashboard = props => {
   return (
     <Box>
@@ -51,9 +54,11 @@ const Dashboard = props => {
         </HStack>
       </Box>
 
-      <Box height="calc(90vh - 75px)" p="2">
+      <Box height="calc(90vh - 75px)">
         <HStack>
-          <Box width={DRAWER_WIDTH}>Drawer</Box>
+          <Box width={DRAWER_WIDTH} py="3">
+            <SidebarItem icon={<ImageIcon />} label="Photos" to="/app" />
+          </Box>
           <Box>
             <Outlet />
           </Box>
