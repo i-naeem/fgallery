@@ -12,8 +12,10 @@ import { Link, Outlet } from 'react-router-dom';
 import { ImageIcon, SettingsIcon, UploadIcon } from '../../assets/icons';
 import AvatarDropdown from '../../components/AvatarDropdown';
 import SidebarItem from '../../components/SidebarItem';
+import { useRef } from 'react';
 
 const Dashboard = props => {
+  const ref = useRef();
   return (
     <Box>
       <Box as="header" height="75px" boxShadow="base">
@@ -28,16 +30,20 @@ const Dashboard = props => {
 
               <HStack>
                 <Button
-                  leftIcon={<UploadIcon />}
                   variant="ghost"
                   color="gray.500"
+                  leftIcon={<UploadIcon />}
+                  onClick={() => ref.current.click()}
                 >
+                  <input type="file" hidden ref={ref} />
                   Upload
                 </Button>
 
                 <IconButton
                   aria-label="Settings"
                   color="gray.500"
+                  as={Link}
+                  to="/settings"
                   variant="ghost"
                   isRound
                   icon={<SettingsIcon />}
