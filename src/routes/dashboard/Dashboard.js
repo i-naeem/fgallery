@@ -12,6 +12,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { SettingsIcon, UploadIcon } from '../../assets/icons';
 import AvatarDropdown from '../../components/AvatarDropdown';
 
+const DRAWER_WIDTH = '250px';
 const Dashboard = props => {
   return (
     <Box>
@@ -50,8 +51,13 @@ const Dashboard = props => {
         </HStack>
       </Box>
 
-      <Box height="calc(90vh - 75px)">
-        <Outlet />
+      <Box height="calc(90vh - 75px)" p="2">
+        <HStack>
+          <Box width={DRAWER_WIDTH}>Drawer</Box>
+          <Box>
+            <Outlet />
+          </Box>
+        </HStack>
       </Box>
     </Box>
   );
