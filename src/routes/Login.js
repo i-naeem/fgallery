@@ -68,7 +68,7 @@ const Login = props => {
 
             <Button
               as={Link}
-              to="/app"
+              to="app"
               size="lg"
               width="100%"
               colorScheme="blue"
