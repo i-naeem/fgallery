@@ -33,6 +33,9 @@ const Login = props => {
             maxW="600px"
             borderRadius="md"
             borderWidth="1px"
+            onSubmit={event => {
+              event.preventDefault();
+            }}
           >
             <Text
               fontWeight="bold"
@@ -68,7 +71,7 @@ const Login = props => {
 
             <Button
               as={Link}
-              to="app"
+              to="/app"
               size="lg"
               width="100%"
               colorScheme="blue"
