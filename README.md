@@ -1,3 +1,3 @@
 # FGallery
 
-> A simple photo gallery built with react, chakra-ui and firebase.
+> A frontend clone of google photos built with react and chakra-ui.

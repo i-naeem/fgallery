@@ -1,7 +1,7 @@
 {
   "name": "fgallery",
   "version": "0.1.0",
-  "description": "A simple photo gallery built with react, chakra-ui and firebase.",
+  "description": "A frontend clone of google photos built with react and chakra-ui.",
   "author": "Mohammad Naeem",
   "private": true,
   "dependencies": {
