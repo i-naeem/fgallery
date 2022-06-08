@@ -17,11 +17,6 @@ const Login = props => {
   const onEmailChange = event => setEmail(event.target.value);
   const onPasswordChange = event => setPassword(event.target.value);
 
-  const onLogin = event => {
-    event.preventDefault();
-
-    alert(`Email: ${email} and Password: ${password}`);
-  };
   return (
     <Box>
       <Header />
@@ -37,7 +32,7 @@ const Login = props => {
             maxW="600px"
             borderRadius="md"
             borderWidth="1px"
-            onSubmit={onLogin}
+            action="/app"
           >
             <Text
               fontWeight="bold"
