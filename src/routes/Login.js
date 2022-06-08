@@ -8,6 +8,7 @@ import {
   FormControl,
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 
 const Login = props => {
@@ -32,7 +33,6 @@ const Login = props => {
             maxW="600px"
             borderRadius="md"
             borderWidth="1px"
-            action="/app"
           >
             <Text
               fontWeight="bold"
@@ -66,7 +66,13 @@ const Login = props => {
               />
             </FormControl>
 
-            <Button type="submit" size="lg" width="100%" colorScheme="blue">
+            <Button
+              as={Link}
+              to="/app"
+              size="lg"
+              width="100%"
+              colorScheme="blue"
+            >
               Login
             </Button>
           </Box>
